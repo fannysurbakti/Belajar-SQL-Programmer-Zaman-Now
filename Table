@@ -1,0 +1,31 @@
+Melihat Table
+SHOW TABLES;
+
+Membuat Table
+CREATE TABLE barang
+(
+kode INT,
+nama VARCHAR(100),
+harga INT,
+jumlah INT
+)
+ENGINE = InnoDB
+
+Melihat Struktur Table
+DESCRIBE nama_tabel;
+DESC nama_tabel;
+SHOW CREATE TABLE nama_tabel;
+
+Mengubah Table
+ALTER TABLE barang
+ADD COLUMN nama_column TEXT,
+DROP COLUMN nama,
+RENAME COLUMN nama TO nama baru,
+MODIFY nama VARCHAR(100) AFTER jumlah,
+MODIFY nama VARCHAR(100) FIRST;
+
+Membuat Ulang Table
+TURNCATE nama_tabel;
+
+Menghapus Table
+DROP TABLE nama_tabel;
