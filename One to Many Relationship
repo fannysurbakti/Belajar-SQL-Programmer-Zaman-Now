@@ -1,0 +1,18 @@
+Membuat Tabel Category
+CREATE TABLE categories
+(
+      id    VARCHAR(10)   NOT NULL,
+      name  VARCHAR(100)  NOT NULL,
+      PRIMARY KEY (id)
+) ENGINE = InnoDB;
+
+Mengubah Tabel Product
+ALTER TABLE products
+    DROP column category;
+    
+ALTER TABLE products
+    ADD COLUMN id_category VARCHAR(100);
+    
+ALTER TABLE products
+    ADD CONSTRAINT fk_product_category
+      FOREIGN KEY (id_category) REFERENCES categories (id);
