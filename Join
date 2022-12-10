@@ -1,0 +1,21 @@
+Melakukan JOIN Table
+SELECT * FROM wishlist
+JOIN products ON (wishlist.id_product = products.id);
+
+SELECT products.id, products.name, whishlist.description
+FROM wishlist
+JOIN products ON (products.id = wishlist.id_product);
+
+Membuat Relasi ke Table Customers
+ALTER TABLE wishlist
+    ADD COLUMN id_customer INT;
+    
+ALTER TABLE whishlist
+ADD CONSTRAINT fk_wishlist_customer
+FOREIGN KEY (id_customer) REFERENCES customers(id);
+
+Melakukan JOIN Multiple Tabel
+SELECT customers.email, products.id, products.name, wishlist.description
+FROM wishlist
+JOIN products ON (products.id = wishlist.id_product)
+JOIN customers ON (customers.id = wishlist.id_customer);
