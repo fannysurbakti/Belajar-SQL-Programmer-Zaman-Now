@@ -5,20 +5,20 @@ CREATE TABLE whishlist
     id_product  VARCHAR(10) NOT NULL,
     description TEXT,
     PRIMARY KEY (id),
-    CONSTRAINT fk_whishlist_product
+    CONSTRAINT fk_wishlist_product
         FOREIGN KEY (id_product) REFERENCES products (id)
  ) ENGINE = InnoDB;
  
  Menambah/Menghapus Foreign Key
- ALTER TABLE whishtlist
-      DROP CONSTRAINT fk_whishlist_product;
+ ALTER TABLE wishtlist
+      DROP CONSTRAINT fk_wishlist_product;
       
- ALTER TABLE whishlist;
-    ADD CONSTRAINT fk_whishlist_product
+ ALTER TABLE wishlist;
+    ADD CONSTRAINT fk_wishlist_product
         FOREIGN KEY (id_product) REFERENCES products (id);
         
  Mengubah Behavior Menghapus Relasi
- ALTER TABLE whishtlist
-    ADD CONSTRAINT fk_whishlist
+ ALTER TABLE wishtlist
+    ADD CONSTRAINT fk_wishlist
       FOREIGN KEY (id_product) REFERENCES products (id)
         ON DELETE CASCADE ON UPDATE CASCADE;
