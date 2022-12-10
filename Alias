@@ -1,0 +1,15 @@
+Alias untuk Kolom
+SELECT id         AS 'Kode'
+       name       AS 'Nama'
+       category   AS 'Kategori'
+       price      AS 'Harga'
+       quantity   AS 'Stock'
+FROM products;
+
+Alias untuk Tabel
+SELECT id         AS 'Kode'
+       name       AS 'Nama'
+       category   AS 'Kategori'
+       price      AS 'Harga'
+       quantity   AS 'Stock'
+FROM products AS p;
