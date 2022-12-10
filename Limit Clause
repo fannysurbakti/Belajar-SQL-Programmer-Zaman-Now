@@ -1,0 +1,13 @@
+Membatasi Hasil Query
+SELECT *
+FROM products
+WHERE price < 0
+ORDER BY price
+LIMIT 2;
+
+Skip Hasil Query
+SELECT *
+FROM products
+WHERE price < 0
+ORDER BY price
+LIMIT 2, 2;
