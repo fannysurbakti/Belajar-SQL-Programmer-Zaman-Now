@@ -1,0 +1,8 @@
+Menambah Kolom Timestamp
+SELECT id
+       EXTRACT(YEAR FROM created_at) AS 'Year',
+       EXTRACT(MONTH FROM created_at) AS 'Month'
+FROM products;
+
+SELECT id, YEAR(created_at), MONTH(created_at)
+FROM products;
