@@ -1,0 +1,40 @@
+Mencari Data dengan Operatoe Perbandingan
+SELECT id, name, price, quantity
+FROM products
+WHERE quantity > 100
+
+Mencari Data dengan Operator AND
+SELECT id, name, price, quantity
+FROM products
+WHERE quantity > 100 AND > 10000;
+
+Mencari Data dengan Operator OR
+SELECT id, name, price, quantity
+FROM products
+WHERE quantity > 500 OR price > 100000;
+
+Prioritas dengan Kurung ()
+SELECT id, name, price, quantity
+FROM products
+WHERE (category= 'Makanan' OR quantity > 500) 
+  AND price > 100000;
+  
+Mencari Menggunakan LIKE Operator
+SELECT *
+FROM products
+WHERE name LIKE '%mie%';
+
+Mencari Menggunakan NULL Operator
+SELECT *
+FROM products
+WHERE description IS NULL;
+
+Mencari Mengguanakan BETWEN Operator
+SELECT *
+FROM products
+WHERE price BETWEEN 10000 AND 20000;
+
+Mencari Menggunakan IN Operator
+SELECT *
+FROM products
+WHERE category IN ('Makanan', 'Minuman');
