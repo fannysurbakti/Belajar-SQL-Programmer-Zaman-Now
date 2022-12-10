@@ -1,0 +1,3 @@
+Menghilangkan Data Duplikat
+SELECT distinct category
+FROM products;
