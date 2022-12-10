@@ -1,0 +1,28 @@
+Melakukan Inner Join
+SELECT * FROM categories
+INNER JOIN products ON (products.id_category = categories.id)
+
+Melakukan Left Join
+SELECT * FROM categories
+LEFT JOIN products ON (products.id_category = categories.id)
+
+Melakukan Right Join
+SELECT * FROM categories
+RIGHT JOIN products ON (products.id_category = categories.id)
+
+Menggunakan Cross Join
+SELECT * FROM categories
+CROSS JOIN products
+
+Membuat Tabel Perkalian
+CREATE TABLE numbers
+(
+    id INT NOT NULL
+    PRIMARY KEY (id)
+) ENGINE = InnoDB;
+
+Cross Join Tabel Perkalian
+SELECT number1.id, number2.id, (number1.id * number2.id) AS result
+FROM numbers AS number1
+        CROSS JOIN numbers AS number2
+ORDER BY number1.id, number2.id;
