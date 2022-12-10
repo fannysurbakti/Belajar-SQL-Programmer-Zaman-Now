@@ -1,0 +1,4 @@
+Mengurutkan Data
+SELECT *
+FROM products
+ORDER BY price ASC, id DESC;
