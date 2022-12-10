@@ -1,0 +1,20 @@
+Menggunakan Control Flow CASE
+SELECT id,
+       CASE category
+            WHEN 'Makanan' THEN 'Enak'
+            WHEN 'Minumana' THEN 'Segar'
+            ELSE 'Apa itu?'
+            END AS 'Category'
+FROM products;
+
+Menggunakan Control Flow IF
+SELECT id,
+       price,
+       IF(price =< 15000, 'Murah',
+        IF(price =< 20000, 'Mahal', 'Mahal Banget')
+          ) AS 'Mahal?)
+FROM products;
+
+Menggunakan Control FLow IFNULL
+SLECT id, name, IFNULL(description, 'Kosong')
+FROM products;
