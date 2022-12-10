@@ -1,0 +1,12 @@
+Menggunakan GROUP BY
+SELECT categoty
+       COUNT(id) AS 'Total Product'
+FROM products
+GROUP BY category;
+
+Menggunakan HAVING CLAUSE
+SELECT category,
+       COUNT(id) AS total
+FROM products
+GROUP BY category
+HAVING total > 1;
