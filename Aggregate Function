@@ -1,0 +1,8 @@
+Menggunakan Aggregate Function
+SELECT COUNT(id) AS 'Total Product' FROM products;
+
+SELECT AVG(id) AS 'Rata-Rata' FROM products;
+
+SELECT MAX(id) AS 'Harga Termahal' FROM products;
+
+SELECT MIN(id) AS 'Harga Termurah' FROM products;
