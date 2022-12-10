@@ -1,0 +1,6 @@
+Menggunakan String Function
+SELECT id, Lower(name) AS 'Name Lower'
+FROM products;
+
+SELECT id, name, LENGTH(name) AS 'Name Length'
+FROM products;
