@@ -1,0 +1,33 @@
+Membuat Table Order
+CREATE TABLE orders
+(
+    id         INT      NOT NULL AUTO_INCREMENT,
+    total      INT      NOT NULL,
+    order_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+) ENGINE = InnoDB;
+
+Membuat Tabel Order Detail
+CREATE TABLE orders_detail
+(
+    id_product  VARCHAR(10) NOT NULL,
+    id_order    INT         NOT NULL,
+    price       INT         NOT NULL,
+    quantity    INT         NOT NULL,
+    PRIMARY KEY (id_product, id_order)
+) ENGINE = InnoDB;
+
+Membuat Foreign Key
+ALTER TABLE order_detail
+    ADD CONSTRAINT fk_orders_detail_product
+        FOREIGN KEY (id_product) REFRENCES products (id);
+        
+ALTER TABLE order_detail
+    ADD CONSTRAINT fk_order_detail_order
+        FOREIGN KEY (id_order) REFERENCES orders (id);
+        
+Melihat Data Order, Detail, dan Product-nya
+SELECT *
+FROM orders
+         JOIN orders_detail ON (orders_detail.id_order = orders.id)
+         JOIN products ON (products.id = orders_detail.id_products);
