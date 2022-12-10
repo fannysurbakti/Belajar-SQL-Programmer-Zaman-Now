@@ -1,0 +1,16 @@
+Membuat Tabel dengan Auto Increment
+CREATE TABLE admin
+(
+  id         INT NOT NULL AUTO_INCREMENT,
+  first_name VARCHAR(100),
+  last_name  VARCHAR(100),
+  PRIMARY KEY (id)
+) ENGINE = InnoDB;
+
+Memasukkan Data Tanpa Id
+INSERT INTO admin(first_name, last_name) VALUES ('Eko', 'Khannedy');
+INSERT INTO admin(first_name, last_name) VALUES ('Budi', 'Nugraha');
+INSERT INTO admin(first_name, last_name) VALUES ('Joko', 'Morro');
+
+Melihat Id Terakhir
+SELECT LAST_INSERT_ID();
