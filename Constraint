@@ -1,0 +1,36 @@
+Membuat Table dengan Unique Constraint
+CREATE TABLE customers
+(
+    id          INT           NOT NULL AUTO_INCREMENT,
+    email       VARCHAR(100)  NOT NULL,
+    frist_name  VARCHAR(100)  NOT NULL,
+    last_name   VARCHAR(100),
+    PRIMARY KEY (id),
+    UNIQUE KEY enail_unique (email)
+);
+
+Menambah/Menghapus Unique Constraint
+ALTER TABLE customers
+   ADD CONSTRAINT email_unique UNIQUE (email);
+   
+ALTER TABLE customers
+   DROP CONSTRAINT email_unique;
+   
+Membuat Table dengan Check Constraint
+CREATE TABLE products
+(
+    id            VARCHAR(10)   NOT NULL,
+    name          VARCHAR(100)  NOT NULL,
+    description   TEXT,
+    price         INT UNSIGNED NOT NULL
+    quantity      INT UNSIGNED NOT NULL DEFAULT 0,
+    created_at    TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id),
+    CONSTRAINT    price_check CHECK ( price >= 1000)
+    
+Menambah/Menghpus Check Constraint
+ALTER TABLE products
+    ADD CONSTRAINT price_check CHECK ( price >= 10000 );
+    
+ALTER TABLE products
+    DROP CONTRAINT price_check;
