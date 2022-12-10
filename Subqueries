@@ -1,0 +1,11 @@
+Melakukan Subquery di WHERE Clause
+SELECT *
+FROM products
+WHERE price > (SELECT AVG(price) FROM products);
+
+Melakukan Subquery di FROM Clause
+SELECT MAX(price)
+FROM products (SELECT price
+              FROM categories
+                      INNER JOIN products
+                                ON (products.id_category = categories.id)) AS cp;
