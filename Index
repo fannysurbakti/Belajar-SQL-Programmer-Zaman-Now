@@ -1,0 +1,17 @@
+Membuat Tabel dengan Index
+CREATE TABLE sellers
+(
+    id    INT NOT NULL AUTO_INCREMENT,
+    name  VARCHAR(100),
+    email VARCHAR(100),
+    PRIMARY KEY (id),
+    UNIQUE KEY (id),
+    INDEX name_index (name)
+)ENGINE = InnoDB
+
+Menambah/Menghapus Index
+ALTER TABLE sellers
+ADD INDEX name_index (name);
+
+ALTER TABLE sellers
+FROP INDEX name_index;
